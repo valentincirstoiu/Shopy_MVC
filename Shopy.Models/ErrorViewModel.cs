@@ -1,4 +1,4 @@
-namespace ShopyWeb.Models
+namespace Shopy.Models
 {
     public class ErrorViewModel
     {
