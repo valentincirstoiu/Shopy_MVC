@@ -10,8 +10,9 @@ namespace Shopy.DataAccess.Repository.IRepository
     public interface IRepository<T> where T: class
     {
         //T - Category
-        IEnumerable<T> GetAll(); //Get all Categories
-        T GetFirstOrDefault(Expression<Func<T,bool>>filter); // get one Category
+        IEnumerable<T> GetAll(string? includeProperties = null); //Get all Categories
+        T GetFirstOrDefault(Expression<Func<T,bool>>filter, string? includeProperties = null); // get one Category
+        //T Get(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = false);
         void Add(T entity);
         void Remove(T entity); 
         void RemoveRange(IEnumerable<T> entities);
